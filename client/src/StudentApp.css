@@ -48,7 +48,7 @@ body {
 }
 
 .menu-icon {
-  display: none;
+  display: inline;
 }
 
 /* Sidebar */

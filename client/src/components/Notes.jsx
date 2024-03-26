@@ -51,7 +51,7 @@ function NoteSection() {
         <div>
           <div className="bg-blue-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4">Add New Note</h3>
-            <input
+            <textarea
               type="text"
               placeholder="Enter new note"
               value={newNote}
@@ -74,7 +74,7 @@ function NoteSection() {
                 <li key={note.id} className="mb-4">
                   {editingNoteId === note.id ? (
                     <div>
-                      <input
+                      <textarea
                         type="text"
                         value={updatedNote}
                         onChange={(e) => setUpdatedNote(e.target.value)}

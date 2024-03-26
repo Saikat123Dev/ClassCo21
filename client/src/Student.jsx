@@ -6,17 +6,17 @@ import './StudentApp.css';
 import { Outlet } from "react-router-dom";
 
 function App() {
-  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
 
-  const toggleSidebar = () => {
-    setOpenSidebarToggle(!openSidebarToggle);
-  };
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle)
+  }
 
   return (
     <div className='grid-container'>
-      <Header open={toggleSidebar}/>
+     <Header OpenSidebar={OpenSidebar}/>
       
-      <Sidebar open={openSidebarToggle} toggle={toggleSidebar}/>
+      <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
       <Outlet/>
       <Home />
       
