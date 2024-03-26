@@ -11,7 +11,7 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
             <div className='sidebar-brand'>
                  PROFILE
             </div>
-            <span className='icon close_icon' onClick={OpenSidebar}>X</span>
+            <div className='icon close_icon' onClick={OpenSidebar}>X</div>
         </div>
 
         <ul className='sidebar-list bg-[#0605333e] '>
