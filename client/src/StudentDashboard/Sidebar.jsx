@@ -28,7 +28,11 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
             </div>
 
             <li className='sidebar-list-item'>
-                <a href="/notes" className='flex'>
+
+                <a href="notes" className='flex'>
+
+               
+
                     <BsFillGrid3X3GapFill className='icon'/> 
                     Upload Notes
                 </a>
@@ -39,7 +43,11 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href="" className='flex'>
+
+                <a href="Assignments" className='flex'>
+
+          
+
                     <BsListCheck className='icon'/> Assignment
                 </a>
             </li>
