@@ -16,38 +16,38 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
 
         <ul className='sidebar-list'>
             <li className='sidebar-list-item'>
-                <a href="/Teach">
+                <a href="/Teach" className='flex'>
                     <BsGrid1X2Fill className='icon'/> Dashboard
                 </a>
             </li>
 
             <li className='sidebar-list-item'>
-                <a href="teachquiz">
+                <a href="teachquiz" className='flex'>
                     <BsFillGrid3X3GapFill className='icon'/> Upload Quiz
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href="uploadAssign">
+                <a href="uploadAssign" className='flex'>
                     <BsFillGrid3X3GapFill className='icon'/> Upload Assignments
                 </a>
             </li>
             <li className='sidebar-list-item flex flex-row'>
-                <a href="">
+                <a href="" className='flex'>
                     <BsPeopleFill className='icon'/> Manage Students
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href="QRCodegenerator">
+                <a href="QRCodegenerator" className='flex'>
                     <BsListCheck className='icon'/> Track Attendance
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
+                <a href="" className='flex'>
                     <BsMenuButtonWideFill className='icon'/> Update Profile
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
+                <a href="" className='flex'>
                     <BsFillGearFill className='icon'/> Settings
                 </a>
             </li>
