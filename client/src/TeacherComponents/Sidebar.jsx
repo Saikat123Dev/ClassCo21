@@ -7,14 +7,14 @@ import
 function Sidebar({openSidebarToggle, OpenSidebar}) {
   return (
     <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
-        <div className='sidebar-title'>
+        <div className='sidebar-title flex bg-[#0605333e] '>
             <div className='sidebar-brand'>
-                <img src='https://cdn-icons-png.freepik.com/512/206/206897.png' className='h-16 w-16'/> PROFILE
+                 PROFILE
             </div>
             <span className='icon close_icon' onClick={OpenSidebar}>X</span>
         </div>
 
-        <ul className='sidebar-list'>
+        <ul className='sidebar-list bg-[#0605333e] '>
             <li className='sidebar-list-item'>
                 <a href="/Teach" className='flex'>
                     <BsGrid1X2Fill className='icon'/> Dashboard

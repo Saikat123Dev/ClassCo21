@@ -45,18 +45,18 @@ function NoteSection() {
   };
 
   return (
-    <div className="container mx-auto mt-10 px-4 lg:px-0 dark:bg-gray-800">
+    <div className="mx-auto mt-10 px-4 lg:px-0 dark:bg-gray-800">
       <h2 className="text-3xl font-bold mb-6 dark:text-white">Note Section</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <div className="bg-blue-800 p-6 rounded-lg">
+          <div className="bg-green-200 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4">Add New Note</h3>
             <textarea
               type="text"
               placeholder="Enter new note"
               value={newNote}
               onChange={(e) => setNewNote(e.target.value)}
-              className="w-full border border-gray-300 p-2 rounded focus:outline-none text-black"
+              className="w-full border border-gray-300 p-2 rounded focus:outline-none text-black dark:border-gray-600 dark:bg-gray-800 dark:text-white"
             />
             <button
               onClick={addNote}
@@ -78,7 +78,7 @@ function NoteSection() {
                         type="text"
                         value={updatedNote}
                         onChange={(e) => setUpdatedNote(e.target.value)}
-                        className="w-full border border-gray-300 p-2 rounded focus:outline-none dark:border-gray-600 dark:bg-gray-800 text-black"
+                        className="w-full border border-gray-300 p-2 rounded focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-white"
                       />
                       <button
                         onClick={updateNote}

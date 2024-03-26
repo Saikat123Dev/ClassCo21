@@ -23,7 +23,7 @@ const quizzSchema = new Schema(
       required: true,
     },
      answer: {
-      type: String,
+      type:String,
       required: true,
     },
   },
