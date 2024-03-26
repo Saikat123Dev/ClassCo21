@@ -21,35 +21,35 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
         <ul className='sidebar-list'>
             <div className="flex">
             <li className='sidebar-list-item'>
-                <a href="">
+                <a href="" className='flex'>
                     <BsGrid1X2Fill className='icon'/> Dashboard
                 </a>
             </li>
             </div>
 
             <li className='sidebar-list-item'>
-                <a href="/notes">
+                <a href="/notes" className='flex'>
                     <BsFillGrid3X3GapFill className='icon'/> 
                     Upload Notes
                 </a>
             </li>
             <li className='sidebar-list-item flex flex-row'>
-                <a href="quizz">
+                <a href="quizz" className='flex'>
                     <BsPeopleFill className='icon'/>Attempt Quiz
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
+                <a href="" className='flex'>
                     <BsListCheck className='icon'/> Assignment
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
+                <a href="" className='flex'>
                     <BsMenuButtonWideFill className='icon'/> Update Profile
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
+                <a href="" className='flex'>
                     <BsFillGearFill className='icon'/> Settings
                 </a>
             </li>
