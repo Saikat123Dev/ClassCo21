@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect,createRef } from 'react';
+import { useRef, useState, useEffect, createRef } from 'react';
 import './Quiz.css';
 
 function Quiz() {
@@ -90,6 +90,7 @@ function Quiz() {
                     key={i}
                     ref={optionRefs.current[i]}
                     onClick={(e) => checkAnswer(e, i+1)}
+                    className="option"
                   >
                     {question[optionKey]}
                   </li>

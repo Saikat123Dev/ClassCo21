@@ -32,7 +32,6 @@ function Home() {
   const cardStyle = {
     ...divStyle,
     background: "#2f2f2f",
-
     borderRadius: "8px",
     padding: "20px",
     display: "flex",
@@ -52,21 +51,24 @@ function Home() {
     transform: "scale(1.05)",
   };
 
-  // State to track hover state
-  const [isHovered, setIsHovered] = useState(false);
+  // State to track hover state for each card
+  const [isHovered1, setIsHovered1] = useState(false);
+  const [isHovered2, setIsHovered2] = useState(false);
+  const [isHovered3, setIsHovered3] = useState(false);
+  const [isHovered4, setIsHovered4] = useState(false);
 
   return (
     <main className="main-container dark-theme">
       <div className="main-title dark-bg">
-        <h2 className="text-2xl font-bold">Hi there</h2>
+        <h2 className="text-2xl font-bold">Hi there, Welcome to ClassConnect</h2>
       </div>
 
       <div className="main-cards display-flex" style={{ gap: '65px' }}>
         <div
           className="card bg-blue-300 dark-card shadow-lg"
-          style={{ ...cardStyle, ...(isHovered && cardHoverStyle) }}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          style={{ ...cardStyle, ...(isHovered1 && cardHoverStyle) }}
+          onMouseEnter={() => setIsHovered1(true)}
+          onMouseLeave={() => setIsHovered1(false)}
         >
           <div
             className="bg-gray-800 rounded-lg p-5 flex flex-col justify-center items-center shadow-lg"
@@ -80,9 +82,9 @@ function Home() {
 
         <div
           className="card bg-blue-300 dark-card shadow-lg"
-          style={{ ...cardStyle, ...(isHovered && cardHoverStyle) }}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          style={{ ...cardStyle, ...(isHovered2 && cardHoverStyle) }}
+          onMouseEnter={() => setIsHovered2(true)}
+          onMouseLeave={() => setIsHovered2(false)}
         >
           <div
             className="bg-gray-800 rounded-lg p-5 flex flex-col justify-center items-center shadow-lg"
@@ -96,9 +98,9 @@ function Home() {
 
         <div
           className="card bg-blue-300 dark-card shadow-lg"
-          style={{ ...cardStyle, ...(isHovered && cardHoverStyle) }}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          style={{ ...cardStyle, ...(isHovered3 && cardHoverStyle) }}
+          onMouseEnter={() => setIsHovered3(true)}
+          onMouseLeave={() => setIsHovered3(false)}
         >
           <div
             className="bg-gray-800 rounded-lg p-5 flex flex-col justify-center items-center shadow-lg"
@@ -112,9 +114,9 @@ function Home() {
 
         <div
           className="card bg-blue-300 dark-card shadow-lg"
-          style={{ ...cardStyle, ...(isHovered && cardHoverStyle) }}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          style={{ ...cardStyle, ...(isHovered4 && cardHoverStyle) }}
+          onMouseEnter={() => setIsHovered4(true)}
+          onMouseLeave={() => setIsHovered4(false)}
         >
           <div
             className="bg-gray-800 rounded-lg p-5 flex flex-col justify-center items-center shadow-lg"
@@ -139,29 +141,20 @@ function Home() {
 
 
 
-         <ResponsiveContainer width="60%" height="60%" style={{ margin: '50px',}}>
-    <div style={{ width: '100%', height: '300px' }} >
-      <LineChart
-        width={750}
-        height={300}
-        data={data}
-        margin={{
-          top: 15,
-          right: 0,
-          left: -18,
-          bottom: 20,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line type="linear" dataKey="Performance" stroke="grey" activeDot={{ r: 8 }} />
-      </LineChart>
-    </div>
-    
-  </ResponsiveContainer> 
+        <ResponsiveContainer width="60%" height={300} style={{ margin: '50px' }}>
+  <LineChart
+    data={data}
+    margin={{ top: 15, right: 0, left: -18, bottom: 20 }}
+  >
+    <CartesianGrid strokeDasharray="3 3" />
+    <XAxis dataKey="name" />
+    <YAxis />
+    <Tooltip />
+    <Legend />
+    <Line type="linear" dataKey="Performance" stroke="grey" activeDot={{ r: 8 }} />
+  </LineChart>
+</ResponsiveContainer>
+
        
      
      
