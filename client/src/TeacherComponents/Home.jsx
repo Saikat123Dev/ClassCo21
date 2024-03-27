@@ -60,9 +60,9 @@ function Home() {
   return (
     <main className="main-container dark-theme">
       <div className="main-title dark-bg">
-        <h2 className="text-2xl font-bold">
-          Hi there, Welcome to ClassConnect
-        </h2>
+
+        <h2 className="text-2xl font-bold">Hi there, Welcome to ClassConnect</h2>
+
       </div>
 
       <div className="main-cards display-flex" style={{ gap: "65px" }}>
@@ -139,6 +139,15 @@ function Home() {
           <Calendar />
         </div>
 
+
+
+       
+     
+     
+     
+     
+     
+
         <ResponsiveContainer
           width="60%"
           height={300}
@@ -161,6 +170,7 @@ function Home() {
             />
           </LineChart>
         </ResponsiveContainer>
+
       </div>
     </main>
   );

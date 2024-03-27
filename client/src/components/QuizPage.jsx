@@ -1,11 +1,14 @@
-import Quiz from "./Quiz"
-import "./QuizPage.css"
+import Quiz from "./Quiz";
+import "./QuizPage.css";
+
 const QuizPage = () => {
   return (
-    <div className="quiz">
-        <Quiz/>
+    <div className="quiz-page">
+      <div className="quiz-container">
+        <Quiz />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default QuizPage
+export default QuizPage;

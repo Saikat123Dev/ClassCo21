@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect,createRef } from 'react';
+import { useRef, useState, useEffect, createRef } from 'react';
 import './Quiz.css';
 import correctSound from "../assets/correct-6033.mp3";
 import wrongSound from "../assets/wrong-buzzer-6268.mp3";
@@ -117,6 +117,7 @@ function Quiz() {
                     key={i}
                     ref={optionRefs.current[i]}
                     onClick={(e) => checkAnswer(e, i+1)}
+                    className="option"
                   >
                     {question[optionKey]}
                   </li>
