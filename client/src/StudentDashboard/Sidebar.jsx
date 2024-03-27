@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import {
   BsGrid1X2Fill,
   BsFillGrid3X3GapFill,
@@ -6,7 +6,7 @@ import {
   BsListCheck,
   BsMenuButtonWideFill,
   BsFillGearFill,
-  BsPersonCircle 
+  
 } from 'react-icons/bs';
 import '../StudentApp.css';
 
@@ -18,8 +18,9 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
   <div className='sidebar-brand bg-[#06053300] rounded-full h-[70px] w-[70px] '>
     
     PROFILE
-    <div className='icon close_icon ' onClick={OpenSidebar}></div>
+   
   </div>
+   <div className='icon close_icon ' onClick={OpenSidebar}>X</div>
 </div>
 
 

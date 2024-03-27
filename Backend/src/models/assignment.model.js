@@ -19,8 +19,8 @@ const assignmentSchema = new Schema(
         required:true
     },
     teacherName: {
-      type:Schema.Types.ObjectId,
-      ref: "Teacher",
+      type:String,
+      required:true
     },
     guidelines: {
       type: String,
@@ -32,6 +32,10 @@ const assignmentSchema = new Schema(
       type:String,
       required: true,
     },
+    status:{
+      type:Boolean,
+      default:false
+    }
   },
   {
     timestamps: true,

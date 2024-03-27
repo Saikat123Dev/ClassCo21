@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaNoteSticky } from 'react-icons/fa6';
 import { GiLevelFour } from 'react-icons/gi';
 import { BsFillTrophyFill } from 'react-icons/bs';
@@ -7,6 +7,8 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Responsi
 import Calendar from '../components/Calender';
 
 function Home() {
+  const [assignments, setAssignments] = useState([]);
+
   const data = [
     { name: 'Attendance', Performance: 50 },
     { name: 'Quiz', Performance: 30 },
@@ -14,6 +16,21 @@ function Home() {
     { name: 'ExtraCurricular', Performance: 30 },
     { name: 'Quiz', Performance: 30 },
   ];
+
+useEffect(() => {
+    fetch('http://localhost:8000/api/v1/students/getAssignments')
+      .then((response) => response.json())
+      .then((data) => {
+        if (Array.isArray(data.data)) {
+          setAssignments(data.data);
+        } else {
+          console.error('API response is not an array:', data);
+        }
+      })
+      .catch((error) => console.error('Error fetching assignments:', error));
+  }, []);
+
+
 
   const divStyle = {
     height: '170px',
@@ -155,50 +172,18 @@ function Home() {
         <th className="p-2 border border-white">Priority</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td className="p-2 border border-white">English</td>
-        <td className="p-2 border border-white">Mr.A.Roy</td>
-        <td className="p-2 border border-white">22.03.2024</td>
-        <td className="p-2 border border-white">Pending</td>
-        <td className="p-2 border border-white">High</td>
-      </tr>
-      <tr>
-        <td className="p-2 border border-white">Science</td>
-        <td className="p-2 border border-white">Mr.Shyam Saha</td>
-        <td className="p-2 border border-white">23.3.2024</td>
-        <td className="p-2 border border-white">Completed</td>
-        <td className="p-2 border border-white">Low</td>
-      </tr>
-      <tr>
-        <td className="p-2 border border-white">Math</td>
-        <td className="p-2 border border-white">Ms. Jane Doe</td>
-        <td className="p-2 border border-white">25.3.2024</td>
-        <td className="p-2 border border-white">In Progress</td>
-        <td className="p-2 border border-white">Medium</td>
-      </tr>
-      <tr>
-        <td className="p-2 border border-white">History</td>
-        <td className="p-2 border border-white">Mr. John Smith</td>
-        <td className="p-2 border border-white">28.3.2024</td>
-        <td className="p-2 border border-white">Pending</td>
-        <td className="p-2 border border-white">High</td>
-      </tr>
-      <tr>
-        <td className="p-2 border border-white">Geography</td>
-        <td className="p-2 border border-white">Ms. Emily Johnson</td>
-        <td className="p-2 border border-white">30.3.2024</td>
-        <td className="p-2 border border-white">In Progress</td>
-        <td className="p-2 border border-white">Medium</td>
-      </tr>
-      <tr>
-        <td className="p-2 border border-white">Physics</td>
-        <td className="p-2 border border-white">Dr. Michael Brown</td>
-        <td className="p-2 border border-white">02.4.2024</td>
-        <td className="p-2 border border-white">Pending</td>
-        <td className="p-2 border border-white">High</td>
-      </tr>
-    </tbody>
+   <tbody>
+  {assignments.map((assignment) => (
+    <tr key={assignment.id}>
+      <td className="p-2 border border-white">{assignment.subject}</td>
+      <td className="p-2 border border-white">{assignment.teacherName}</td>
+      <td className="p-2 border border-white">{assignment.deadline}</td>
+      <td className="p-2 border border-white">Pending</td>
+      <td className="p-2 border border-white">High</td>
+    </tr>
+  ))}
+</tbody>
+
   </table>
 
 </div>

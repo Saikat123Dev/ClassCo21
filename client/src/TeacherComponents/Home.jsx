@@ -18,11 +18,11 @@ import Calendar from "../components/Calender";
 
 function Home() {
   const data = [
-    { name: "Attendance", Performance: 50 },
-    { name: "Quiz", Performance: 30 },
-    { name: "Assignment", Performance: 69 },
-    { name: "ExtraCurricular", Performance: 60 },
-    { name: "Quiz", Performance: 30 },
+    { name: "Attendance", Class9: 60 },
+    { name: "Quiz", Class9: 30 },
+    { name: "Assignment", Class9: 69 },
+    { name: "ExtraCurricular", Class9: 40 },
+    { name: "Quiz", Class9: 80 },
   ];
 
   const divStyle = {
@@ -60,10 +60,12 @@ function Home() {
   return (
     <main className="main-container dark-theme">
       <div className="main-title dark-bg">
+
         <h2 className="text-2xl font-bold">Hi there, Welcome to ClassConnect</h2>
+
       </div>
 
-      <div className="main-cards display-flex" style={{ gap: '65px' }}>
+      <div className="main-cards display-flex" style={{ gap: "65px" }}>
         <div
           className="card bg-blue-300 dark-card shadow-lg"
           style={{ ...cardStyle, ...(isHovered1 && cardHoverStyle) }}
@@ -139,28 +141,36 @@ function Home() {
 
 
 
-
-
-        <ResponsiveContainer width="60%" height={300} style={{ margin: '50px' }}>
-  <LineChart
-    data={data}
-    margin={{ top: 15, right: 0, left: -18, bottom: 20 }}
-  >
-    <CartesianGrid strokeDasharray="3 3" />
-    <XAxis dataKey="name" />
-    <YAxis />
-    <Tooltip />
-    <Legend />
-    <Line type="linear" dataKey="Performance" stroke="grey" activeDot={{ r: 8 }} />
-  </LineChart>
-</ResponsiveContainer>
-
        
      
      
      
      
      
+
+        <ResponsiveContainer
+          width="60%"
+          height={300}
+          style={{ margin: "50px" }}
+        >
+          <LineChart
+            data={data}
+            margin={{ top: 15, right: 0, left: -18, bottom: 20 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Line
+              type="monotone"
+              dataKey="Class9"
+              stroke="grey"
+              activeDot={{ r: 8 }}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+
       </div>
     </main>
   );
