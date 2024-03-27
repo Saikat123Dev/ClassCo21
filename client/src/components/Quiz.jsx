@@ -82,7 +82,7 @@ function Quiz() {
 
   const resetQuiz = () => {
     setIndex(0);
-    setQuestion(null);
+    setQuestion(quizData[index]);
     setLock(false);
     setScore(0);
     setResult(false);
@@ -96,7 +96,7 @@ function Quiz() {
   };
 
   return (
-    <div className="container w-[650px]">
+    <div className="container w-[650px] mt-5">
       <h1>Attempt the Quiz</h1>
        <div className='timer'>Time Remaining: {formatTime(timer)}</div>
       <hr />
