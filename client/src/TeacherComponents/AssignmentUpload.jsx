@@ -5,6 +5,7 @@ const AssignmentUpload = () => {
         title: '',
         description: '',
         className: '',
+        teacherName:'',
         subject: '',
         guidelines: '',
         deadline: '',
@@ -38,6 +39,7 @@ const AssignmentUpload = () => {
                 title: '',
                 description: '',
                 className: '',
+                teacherName:'',
                 subject: '',
                 guidelines: '',
                 deadline: '',
@@ -61,6 +63,18 @@ const AssignmentUpload = () => {
                         onChange={handleChange}
                         className="w-full px-3 py-2 border border-gray-300 rounded shadow-sm"
                         placeholder="Assignment Title"
+                        
+                    />
+                </div>
+                <div>
+                    <label className="block text-sm font-medium text-gray-100">Teacher Name</label>
+                    <input
+                        type="text"
+                        name="teacherName"
+                        value={assignment.teacherName}
+                        onChange={handleChange}
+                        className="w-full px-3 py-2 border border-gray-300 rounded shadow-sm"
+                        placeholder="Class Teacher Name"
                         
                     />
                 </div>

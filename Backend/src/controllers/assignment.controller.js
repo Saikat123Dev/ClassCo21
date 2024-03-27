@@ -17,7 +17,7 @@ const giveAssignment = asyncHandler(async(req,res)=>{
   const assignment = await Assignment.create({
     title,
     description,
-    teacherName : "55153a8014829a865bbf700d",
+    teacherName,
     subject:subject.toLowerCase(),
     className,
     guidelines,
